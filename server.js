@@ -34,16 +34,17 @@ app.use("/api/v1/order", authMiddleware, orderRoutes);
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
-const PORT = process.env.PORT || 6000;
+const port = process.env.PORT || 6000;
 
 (async () => {
   try {
-    console.log("ppoooppppp", PORT);
+    console.log("ppoooppppp", port);
+    console.log("DWOQKEDWQJ", process.env.MONGO_URL);
     await connectDB(
       "mongodb+srv://admin:l706GT0t2L4@demo-tires.zbftfdp.mongodb.net/"
     );
-    app.listen(PORT, () => {
-      console.log(`Server is listing on port ${PORT}...`);
+    app.listen(port, () => {
+      console.log(`Server is listing on port ${port}...`);
     });
     console.log("dsadsa");
   } catch (error) {
