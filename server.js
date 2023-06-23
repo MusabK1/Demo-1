@@ -39,7 +39,9 @@ const PORT = process.env.PORT || 6000;
 (async () => {
   try {
     console.log(PORT);
-    await connectDB(process.env.MONGO_URL);
+    await connectDB(
+      "mongodb+srv://admin:l706GT0t2L4@demo-tires.zbftfdp.mongodb.net/"
+    );
     app.listen(PORT, () => {
       console.log(`Server is listing on port ${PORT}...`);
     });
