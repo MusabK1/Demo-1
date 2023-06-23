@@ -34,14 +34,16 @@ app.use("/api/v1/order", authMiddleware, orderRoutes);
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 6000;
 
 (async () => {
   try {
+    console.log(PORT);
     await connectDB(process.env.MONGO_URL);
     app.listen(PORT, () => {
       console.log(`Server is listing on port ${PORT}...`);
     });
+    console.log("dsadsa");
   } catch (error) {
     console.log(error);
   }
