@@ -38,7 +38,7 @@ const PORT = process.env.PORT || 6000;
 
 (async () => {
   try {
-    console.log(PORT);
+    console.log("ppoooppppp", PORT);
     await connectDB(
       "mongodb+srv://admin:l706GT0t2L4@demo-tires.zbftfdp.mongodb.net/"
     );
