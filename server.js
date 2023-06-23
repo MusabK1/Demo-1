@@ -26,7 +26,7 @@ app.use(cors());
 
 // routes
 app.use("/api/v1/auth", authRoutes);
-app.use("/api/v1/user", authMiddleware, userRoutes);
+app.use("api/v1/user", authMiddleware, userRoutes);
 app.use("/api/v1/product", productRoutes); // sync
 app.use("/api/v1/products", authMiddleware, productsRoutes);
 app.use("/api/v1/order", authMiddleware, orderRoutes);
