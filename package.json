@@ -9,6 +9,9 @@
     "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "v19.4.0"
+  },
   "author": "Euro Pixel",
   "license": "ISC",
   "dependencies": {
