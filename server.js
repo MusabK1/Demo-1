@@ -3,8 +3,6 @@ import fileUpload from "express-fileupload";
 import dotenv from "dotenv";
 import cors from "cors";
 import "express-async-errors";
-import dbConn from "./db.js";
-import defaultPorts from "./port.js";
 
 const app = express();
 dotenv.config();
@@ -40,6 +38,7 @@ const port = process.env.PORT || 6000;
 
 (async () => {
   try {
+    console.log("dsadsaewq", process.env.MONGO_URL);
     await connectDB(process.env.MONGO_URL);
     app.listen(port, () => {
       console.log(`Server is listing on port ${port}...`);
