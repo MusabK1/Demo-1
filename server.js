@@ -40,7 +40,7 @@ const port = process.env.PORT || 6000;
 
 (async () => {
   try {
-    console.log("dsadsaewq", dbConn.production.database);
+    console.log("dsadsaewq", process.env.MONGO_URL);
     await connectDB(dbConn.production.database);
     app.listen(port, () => {
       console.log(`Server is listing on port ${port}...`);
