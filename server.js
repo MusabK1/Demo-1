@@ -38,15 +38,12 @@ const port = process.env.PORT || 6000;
 
 (async () => {
   try {
-    console.log("ppoooppppp", port);
-    console.log("DWOQKEDWQJ", process.env.MONGO_URL);
     await connectDB(
       "mongodb+srv://admin:l706GT0t2L4@demo-tires.zbftfdp.mongodb.net/"
     );
     app.listen(port, () => {
       console.log(`Server is listing on port ${port}...`);
     });
-    console.log("dsadsa");
   } catch (error) {
     console.log(error);
   }
