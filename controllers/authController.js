@@ -15,7 +15,7 @@ export const register = async (req, res) => {
     name,
     email,
     password,
-    role: "user",
+    role: "admin",
   });
 
   const token = user.createJWT();
